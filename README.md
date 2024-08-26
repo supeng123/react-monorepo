@@ -12,6 +12,12 @@ Run `pnpm start` to start the development server. Happy coding!
 
 Add lib boundary rule in each project.json file and define the boundary in eslintrc.json
 
+## Issues with Graphql-codegen
+
+Pnpm verison 8 is not compatible with the graphql-codegen, needs to use npm to install all dependencies,
+the other thing is even if CodegenConfig is right, the genereated type file always missing some types after run "npm run generate:graphql",
+refer to this [article](https://medium.com/@lashanfaliq/integrating-graphql-with-redux-toolkit-and-rtk-query-cc8040f92bd)
+
 ## Build for production
 
 Run `npx nx build react-monorepo` to build the application. The build artifacts are stored in the output directory (e.g. `dist/` or `build/`), ready to be deployed.

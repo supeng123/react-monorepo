@@ -1,0 +1,18 @@
+query getAlbums {
+  albums {
+    id
+    title
+  }
+}
+
+query getAlbussAndUsers {
+  albums {
+    id
+    title
+  }
+
+  users {
+    id
+    name
+  }
+}

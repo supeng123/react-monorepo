@@ -1,0 +1,22 @@
+type User {
+  id: String
+  name: String
+}
+
+type Album {
+  id: String
+  user_id: String
+  title: String
+}
+
+type Photo {
+  id: String
+  album_id: String
+  url: String
+}
+
+type Query {
+  albums: [Album]
+  photos: [Photo]
+  users: [User]
+}
