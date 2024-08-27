@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@react-monorepo/post": ["libs/post/src/index.ts"],
       "@react-monorepo/share-ui": ["libs/share-ui/src/index.ts"],
       "@react-monorepo/todolist": ["libs/todolist/src/index.ts"],
       "@react-monorepo/user": ["libs/user/src/index.ts"]

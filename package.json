@@ -4,13 +4,19 @@
   "license": "MIT",
   "scripts": {
     "start": "nx serve react-monorepo",
-    "start:serve": "json-server --watch db.json --port 3005"
+    "start:serve": "json-server --watch db.json --port 3005",
+    "start:graphql:serve": "json-graphql-server db.js --port 3006"
   },
   "private": true,
   "dependencies": {
+    "@chakra-ui/react": "^2.8.2",
     "@faker-js/faker": "^8.4.1",
     "@reduxjs/toolkit": "^2.2.7",
+    "@rtk-query/graphql-request-base-query": "^2.0.0",
     "classnames": "^2.5.1",
+    "graphql": "^15.5.0",
+    "graphql-request": "^3.4.0",
+    "json-graphql-server": "^3.1.2",
     "json-server": "1.0.0-beta.1",
     "react": "18.3.1",
     "react-dom": "18.3.1",
