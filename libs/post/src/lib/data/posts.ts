@@ -54,8 +54,55 @@ export const postsApi = createApi({
           `,
         }),
       }),
+      getUsers: builder.query({
+        query: () => ({
+          document: gql`
+            query GetPosts {
+              allUsers {
+                id
+                name
+              }
+            }
+          `,
+        }),
+      }),
+      getUser: builder.query({
+        query: (id) => ({
+          document: gql`
+            query GetUser($id: ID!) {
+              User(id: $id) {
+                id
+                name
+              }
+            }
+          `,
+           variables: {
+            id,
+          },
+        }),
+      }),
+      getComment: builder.query({
+        query: (id) => ({
+          document: gql`
+            query GetComment($id: ID!) {
+              Comment(id: $id) {
+                id
+                body
+                Post {
+                  author
+                  content
+                  status
+                }
+              }
+            }
+          `,
+           variables: {
+            id,
+          },
+        }),
+      }),
     }),
   });
 
 
-export const { useGetPostQuery } = postsApi;
+export const { useGetPostQuery, useGetUsersQuery, useGetUserQuery, useGetCommentQuery } = postsApi;
